@@ -1,0 +1,47 @@
+Create a romantic apology website using HTML, CSS, and JavaScript in a single file.
+
+Theme:
+Aesthetic romantic website designed for someone named Wradista Farhatus Sanada. The design should feel emotional, warm, and sincere.
+
+Design:
+- Dark romantic gradient background (black to deep purple or dark pink)
+- Floating glowing hearts or particles in the background
+- A glassmorphism card in the center (blur background effect)
+- Smooth fade-in animations when the page loads
+- Fully responsive for mobile screens
+
+Structure:
+
+1. Landing Section
+Title: "Untuk Wradista Farhatus Sanada ❤️"
+Subtitle: "Aku punya sesuatu yang sangat ingin aku sampaikan ke kamu..."
+Button: "Klik di sini"
+
+2. Apology Section
+Title: "Aku Minta Maaf"
+
+Text with typing animation:
+"distaaa, maaf yah karena telat say hay to u, tapi beneran deh, telat say hay bukan berarti gaa sayangg atauu gaa cintaa, i really love you my girl, my princess."
+
+Button: "Lanjut"
+
+3. Final Section
+Text: "Masih mau kasih aku kesempatan?"
+
+Two buttons:
+"Iya ❤️"
+"Aku pikir dulu"
+
+Interaction:
+If the user clicks "Iya ❤️", show a popup message:
+
+"Terima kasih Wradista. Kamu sangat berarti buat aku. Aku janji akan berusaha jadi lebih baik."
+
+Extra Features:
+- Soft romantic background music with a toggle button
+- Floating hearts animation
+- Smooth transitions between sections
+- Google font (Poppins or Playfair Display)
+- Buttons with soft glowing hover effects
+
+Make the website emotional, simple, modern, and heartfelt. The entire website must be written in a single HTML file including CSS and JavaScript.
