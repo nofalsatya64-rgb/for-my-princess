@@ -1,48 +1,138 @@
-Create a romantic apology website using **HTML, CSS, and JavaScript in a single file**.
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Wradista ❤️</title>
 
-Theme:
-Aesthetic romantic website designed for someone named **Wradista Farhatus Sanada**. The design should feel emotional, warm, and sincere.
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-Design:
+<style>
 
-* Dark romantic gradient background (black to deep purple or dark pink).
-* Floating glowing hearts or particles.
-* A glassmorphism card in the center (blur background effect).
-* Smooth fade-in animations when the page loads.
-* Responsive design for mobile screens.
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-Structure:
+body{
+height:100vh;
+background:linear-gradient(135deg,#000000,#3a004d,#ff4da6);
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+color:white;
+}
 
-1. Landing Section
-   Title: "Untuk Wradista Farhatus Sanada ❤️"
-   Subtitle: "Aku punya sesuatu yang sangat ingin aku sampaikan ke kamu..."
-   Button: "Klik di sini"
+/* card */
 
-2. Apology Section
-   Title: "Aku Minta Maaf"
-   Text (with typing animation):
-   "Hayy my princess!!!, maaf yaa karna telat to say hay, tapi seriuss dehh, telatt sayy hayy itu ga berartii gaa sayangg atau ga cintaa yaa, so i love you, my princess"
+.card{
+width:90%;
+max-width:420px;
+padding:40px;
+border-radius:20px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+text-align:center;
+box-shadow:0 0 30px rgba(255,255,255,0.1);
+}
 
-Button: "Lanjut"
+h1{
+margin-bottom:10px;
+font-size:26px;
+}
 
-3. Final Section
-   Text: "Masih mau kasih aku kesempatan?"
-   Two buttons:
+p{
+font-size:15px;
+line-height:1.6;
+margin-bottom:25px;
+}
 
-* "Iya ❤️"
-* "Aku pikir dulu"
+button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#ff4da6;
+color:white;
+font-size:14px;
+cursor:pointer;
+}
 
-Interaction:
+button:hover{
+transform:scale(1.05);
+}
 
-* If "Iya ❤️" is clicked, show a sweet popup message:
-  "Terima kasih Wradista. Kamu sangat berarti buat aku. Aku janji akan berusaha jadi lebih baik."
+.hidden{
+display:none;
+}
 
-Extra Features:
+</style>
+</head>
 
-* Soft romantic background music with a toggle button.
-* Floating heart animation.
-* Smooth transitions between sections.
-* Google font (Poppins or Playfair Display).
-* Buttons with soft glowing hover effects.
+<body>
 
-Make the website emotional, simple, and heartfelt.
+<div class="card" id="section1">
+<h1>Untuk Wradista Farhatus Sanada ❤️</h1>
+<p>Aku punya sesuatu yang sangat ingin aku sampaikan ke kamu...</p>
+<button onclick="next(1)">Klik di sini</button>
+</div>
+
+<div class="card hidden" id="section2">
+<h1>Aku Minta Maaf</h1>
+<p id="typing"></p>
+<button onclick="next(2)">Lanjut</button>
+</div>
+
+<div class="card hidden" id="section3">
+<h1>Masih mau kasih aku kesempatan?</h1>
+
+<button onclick="yes()">Iya ❤️</button>
+<br><br>
+<button onclick="alert('Aku akan tetap nunggu kamu maafin aku yaa ❤️')">Aku pikir dulu</button>
+
+</div>
+
+<script>
+
+function next(num){
+
+document.getElementById("section"+num).classList.add("hidden");
+
+document.getElementById("section"+(num+1)).classList.remove("hidden");
+
+if(num===1){
+startTyping();
+}
+
+}
+
+const text="distaaa, maaf yah karena telat say hay to u, tapi beneran deh, telat say hay bukan berarti gaa sayangg atauu gaa cintaa, i really love you my girl, my princess.";
+
+let i=0;
+
+function startTyping(){
+
+let speed=40;
+
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,speed);
+}
+}
+
+type();
+
+}
+
+function yes(){
+alert('Terima kasih Wradista. Kamu sangat berarti buat aku.');
+}
+
+</script>
+
+</body>
+</html>
